@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class Stickman : MonoBehaviour
 {  
-    [SerializeField] private GameObject losePanel, cubeText;
+    [SerializeField] private GameObject cubeText;
     [SerializeField] private Transform positionText;
 
     private Animator anim;
     private PlayerRagdoll ragdoll;
+    private GameObject losePanel;
 
     public bool loseGame = false;
 
-    void Start()
+    void Awake()
     {
+        losePanel = GameObject.Find("LosePanel");
         anim = GetComponent<Animator>();
         ragdoll = GetComponentInChildren<PlayerRagdoll>();
+    }
+
+    void Start()
+    {
+        losePanel.SetActive(false);
     }
 
     public void Jump()

@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private GameObject playPanel;
     [SerializeField] private float speedX = 5f, speedZ = 10f, acceleration = 5f;
     
     private Rigidbody rb;
     private Stickman stickman;
     private Vector2 initialTouchPosition;
+    private GameObject playPanel;
 
     private float minX = -2f, maxX = 2f, currentSpeedX = 0f, initialPlayerPositionX;
     private bool isPlaying = false;
 
-    void Start()
+    void Awake()
     {
+        playPanel = GameObject.Find("PlayPanel");
         rb = GetComponent<Rigidbody>();
         stickman = GetComponentInChildren<Stickman>();
     }
-
+    
     void FixedUpdate()
     {
         if(!stickman.loseGame)

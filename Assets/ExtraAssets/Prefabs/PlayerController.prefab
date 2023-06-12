@@ -456,7 +456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e1338094da9e648b168136d135778a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  losePanel: {fileID: 0}
   cubeText: {fileID: 8826951187986414746, guid: e3f3042afd3e879458c1e9b8535296e0,
     type: 3}
   positionText: {fileID: 1795618774}
@@ -519,9 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d63f86142ca137479139de3d116c038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playPanel: {fileID: 0}
   speedX: 5
-  speedZ: 10
+  speedZ: 12
   acceleration: 5
 --- !u!1001 &4706305467149597923
 PrefabInstance:

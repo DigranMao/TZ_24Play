@@ -14,10 +14,14 @@ public class CubeManager : MonoBehaviour
     private List<GameObject> cubes = new List<GameObject>();
     private bool collisionObstacle = false;
 
-    private void Start()
+    void Awake()
     {
         stickman = GameObject.Find("Stickman").GetComponent<Stickman>();
         camera = GameObject.Find("Main Camera").GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
         cubes.Add(firstCube);
     }
 
